@@ -1,39 +1,41 @@
 #!/usr/bin/perl
+
 use strict;
 use warnings;
 use LWP::Simple;
-use HTTP::Status;
-use Text::CSV_XS;
+use Text::CSV;
 
-# URL of the BDInfo report
 my $url = "https://forum.blu-ray.com/showthread.php?p=18667865";
-my $csv_file = 'output.csv'; # Replace with the name of the output CSV file
-my @fields = ('Disc Title', 'Video codec 1 bitrate', 'Video codec 2 bitrate', 'Audio codec 1 bitrate');
+my $start_pattern = 'DISC INFO:';
+my $end_pattern = 'SUBTITLES:';
+my $csv_file = 'output.csv';
 
-my $csv = Text::CSV_XS->new({ binary => 1, eol => "\n" }) or die "Cannot use CSV: " . Text::CSV_XS->error_diag();
-$csv->print(\*STDOUT, \@fields);
+my $csv = Text::CSV->new({ binary => 1, auto_diag => 1, eol => "\n" });
+open(my $fh, '>', $csv_file) or die "Cannot open $csv_file: $!";
 
-my $content = get($url) or die "Error retrieving URL: $!";
+# Add header row to CSV
+$csv->print($fh, ["Disc Title", "MPEG-H HEVC Video", "* MPEG-H HEVC Video", "Dolby TrueHD/Atmos Audio"]);
 
-while ($content =~ m/Disc Title:\s*(.*?)<br \/>(.*?)SUBTITLES:<br \/>/smg) {
-    my $title = $1;
-    my $playlist_info = $2;
 
-print "playlist_info is [$playlist_info]\n";
+my $content = get($url) or die "Error getting $url: $!";
 
-    my %bitrates = ();
-    while ($playlist_info =~ m/^(.*?)\s+(\d+)\skbps\s+(.*?)<br \/>/gm) {
-        my $codec = $1;
-        my $bitrate = $2;
-        my $description = $3;
-        $bitrates{$codec} = $bitrate;
+my @reports = split(/($start_pattern.*?$end_pattern)/s, $content);
+shift @reports; # remove first element (not a full report)
+
+foreach my $report (@reports) {
+    if ( $report =~ /DISC INFO/ )
+    {
+        print "report is [$report]\n------------------------------------------\n\n\n";
+        my ($title) = $report =~ /Disc Title:\s*(.*?)\n/i;
+        $title =~ s/\r//g;
+        $title =~ s/<br \/>//g;
+        my ($vc1_bitrate) = $report =~ /MPEG-H HEVC Video.*?([\d.]+)\s*kbps/ism;
+        my ($vc2_bitrate) = $report =~ /\* MPEG-H HEVC Video.*?([\d.]+)\s*kbps/ism;
+        my ($ac1_bitrate) = $report =~ /Dolby TrueHD\/Atmos Audio.*?([\d.]+)\s*kbps/ism;
+        print "title is [$title][$vc1_bitrate][$vc2_bitrate][$ac1_bitrate]\n";
+
+        $csv->print($fh, [$title, $vc1_bitrate, $vc2_bitrate, $ac1_bitrate]);
     }
-
-    my @values = ($title, $bitrates{'Video'}, $bitrates{'Video 2'}, $bitrates{'Audio'});
-    $csv->print(\*STDOUT, \@values);
-    $csv->print(\*STDERR, \@values);
-
-    open(my $fh, '>>', $csv_file) or die "Cannot open file '$csv_file' for writing: $!";
-    $csv->print($fh, \@values);
-    close $fh;
 }
+
+close $fh;
