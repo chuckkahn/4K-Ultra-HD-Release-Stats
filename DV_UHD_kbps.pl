@@ -2,25 +2,38 @@
 use strict;
 use warnings;
 use LWP::Simple;
+use HTTP::Status;
+use Text::CSV_XS;
 
 # URL of the BDInfo report
-my $url = "https://forum.blu-ray.com/showthread.php?p=14764370&highlight=kbps#post14764370";
+my $url = "https://forum.blu-ray.com/showthread.php?p=18667865";
+my $csv_file = 'output.csv'; # Replace with the name of the output CSV file
+my @fields = ('Disc Title', 'Video codec 1 bitrate', 'Video codec 2 bitrate', 'Audio codec 1 bitrate');
 
-# Download the BDInfo report content
-my $content = get $url;
+my $csv = Text::CSV_XS->new({ binary => 1, eol => "\n" }) or die "Cannot use CSV: " . Text::CSV_XS->error_diag();
+$csv->print(\*STDOUT, \@fields);
 
-# Regular expression pattern for matching kbps values
-my $kbps_pattern = qr/Bit rate\s*:\s*([\d,]+)\s*kbps/;
+my $content = get($url) or die "Error retrieving URL: $!";
 
-# Scrape kbps values from each track in the BDInfo report
-my @kbps_values;
-while ($content =~ /$kbps_pattern/g) {
-    my $kbps = $1;
-    $kbps =~ s/,//g;  # Remove commas from the number
-    push @kbps_values, $kbps;
+while ($content =~ m/Disc Title:\s*(.*?)<br \/>(.*?)SUBTITLES:<br \/>/smg) {
+    my $title = $1;
+    my $playlist_info = $2;
+
+print "playlist_info is [$playlist_info]\n";
+
+    my %bitrates = ();
+    while ($playlist_info =~ m/^(.*?)\s+(\d+)\skbps\s+(.*?)<br \/>/gm) {
+        my $codec = $1;
+        my $bitrate = $2;
+        my $description = $3;
+        $bitrates{$codec} = $bitrate;
+    }
+
+    my @values = ($title, $bitrates{'Video'}, $bitrates{'Video 2'}, $bitrates{'Audio'});
+    $csv->print(\*STDOUT, \@values);
+    $csv->print(\*STDERR, \@values);
+
+    open(my $fh, '>>', $csv_file) or die "Cannot open file '$csv_file' for writing: $!";
+    $csv->print($fh, \@values);
+    close $fh;
 }
-
-# Output the kbps values in CSV format
-open my $csv_file, '>', 'output.csv' or die $!;
-print $csv_file join(",", @kbps_values);
-close $csv_file;

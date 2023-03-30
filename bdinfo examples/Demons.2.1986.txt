@@ -1,0 +1,17 @@
+Disc Title: Demons.2.1986
+Disc Size: 76,851,799,237 bytes
+Protection: AACS2
+Playlist: 00200.MPLS  
+Size: 63,667,169,280 bytes
+Length: 1:31:02.166
+Total Bitrate: 93.25 Mbps
+Video: MPEG-H HEVC Video / 77954 kbps / 2160p / 24 fps / 16:9 / Main 10 @ Level 5.1 @ High / 4:2:0 / 10 bits / 1000nits / HDR10 / BT.2020
+Video: * MPEG-H HEVC Video / 80 kbps (0.10%) / 1080p / 24 fps / 16:9 / Main 10 @ Level 5.1 @ High / 4:2:0 / 10 bits / 1000nits / Dolby Vision MEL / BT.2020
+Audio: English / DTS-HD Master Audio / 5.1 / 48 kHz / 3473 kbps / 24-bit (DTS Core: 5.1 / 48 kHz / 768 kbps / 24-bit)
+Audio: English / DTS-HD Master Audio / 2.0 / 48 kHz / 1448 kbps / 24-bit (DTS Core: 2.0 / 48 kHz / 768 kbps / 24-bit)
+Audio: English / Dolby Digital Audio / 2.0 / 48 kHz / 192 kbps
+Audio: English / Dolby Digital Audio / 2.0 / 48 kHz / 192 kbps
+* Audio: Italian / DTS-HD Master Audio / 5.1 / 48 kHz / 3599 kbps / 24-bit (DTS Core: 5.1 / 48 kHz / 768 kbps / 24-bit)
+* Audio: Italian / DTS-HD Master Audio / 2.0 / 48 kHz / 1636 kbps / 24-bit (DTS Core: 2.0 / 48 kHz / 768 kbps / 24-bit)
+Subtitle: English / 22.582 kbps  
+* Subtitle: English / 14.489 kbps

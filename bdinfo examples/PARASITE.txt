@@ -1,0 +1,39 @@
+DISC INFO:
+
+Disc Title: PARASITE
+Disc Label: Parasite 2019 KOR UHD.BLURAY HEVC TrueHD 7.1
+Disc Size: 94,956,642,723 bytes
+Protection: AACS2
+Extras: Ultra HD
+BDInfo: 0.7.5.5
+
+PLAYLIST REPORT:
+
+Name: 00002.MPLS
+Length: 2:11:52.738 (h:m:s.ms)
+Size: 92,799,165,888 bytes
+Total Bitrate: 93.82 Mbps
+
+(*) Indicates included stream hidden by this playlist.
+
+VIDEO:
+
+Codec Bitrate Description
+----- ------- -----------
+MPEG-H HEVC Video 76786 kbps 2160p / 23.976 fps / 16:9 / Main 10 @ Level 5.1 @ High / 10 bits / HDR10 / BT.2020
+* MPEG-H HEVC Video 6264 kbps 1080p / 23.976 fps / 16:9 / Main 10 @ Level 5.1 @ High / 10 bits / Dolby Vision / BT.2020
+
+AUDIO:
+
+Codec Language Bitrate Description
+----- -------- ------- -----------
+Dolby TrueHD/Atmos Audio Korean 5125 kbps 7.1 / 48 kHz / 4485 kbps / 24-bit (AC3 Embedded: 5.1-EX / 48 kHz / 640 kbps / DN -31dB)
+Dolby Digital Audio Korean 192 kbps 2.0 / 48 kHz / 192 kbps / DN -27dB
+Dolby Digital Audio Korean 192 kbps 2.0 / 48 kHz / 192 kbps / DN -27dB
+
+SUBTITLES:
+
+Codec Language Bitrate Description
+----- -------- ------- -----------
+Presentation Graphics Korean 35.303 kbps
+Presentation Graphics English 33.846 kbps

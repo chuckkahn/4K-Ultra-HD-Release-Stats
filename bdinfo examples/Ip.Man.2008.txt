@@ -1,0 +1,39 @@
+DISC INFO:
+
+Disc Title:     Ip.Man.2008
+Disc Size:      55,775,333,964 bytes
+Protection:     AACS2
+Extras:         Ultra HD
+BDInfo:         0.7.5.9 (compatible layout created by DVDFab 12.0.1.5)
+
+PLAYLIST REPORT:
+
+Name:                   00001.MPLS  
+Length:                 1:46:30.000 (h:m:s.ms)
+Size:                   53,809,784,832 bytes
+Total Bitrate:          67.37 Mbps
+
+(*) Indicates included stream hidden by this playlist.
+
+VIDEO:
+
+Codec                   Bitrate             Description    
+-----                   -------             -----------    
+MPEG-H HEVC Video       49956 kbps          2160p / 24 fps / 16:9 / Main 10 @ Level 5.1 @ High / 4:2:0 / 10 bits / 1000nits / HDR10 / BT.2020
+* MPEG-H HEVC Video     1897 kbps (3.66%)   1080p / 24 fps / 16:9 / Main 10 @ Level 5.1 @ High / 4:2:0 / 10 bits / 1000nits / Dolby Vision FEL / BT.2020
+
+AUDIO:
+
+Codec                           Language        Bitrate         Description    
+-----                           --------        -------         -----------    
+Dolby TrueHD/Atmos Audio        Chinese         5816 kbps       7.1+11 objects / 48 kHz / 5176 kbps / 24-bit (AC3 Core: 5.1-EX / 48 kHz / 640 kbps)
+DTS-HD Master Audio             English         2431 kbps       5.1 / 48 kHz / 2431 kbps / 16-bit (DTS Core: 5.1 / 48 kHz / 1509 kbps / 16-bit)
+DTS-HD Master Audio             Chinese         2444 kbps       5.1 / 48 kHz / 2444 kbps / 16-bit (DTS Core: 5.1 / 48 kHz / 1509 kbps / 16-bit)
+Dolby Digital Audio             Spanish         384 kbps        2.0 / 48 kHz / 384 kbps
+
+SUBTITLES:
+
+Codec                           Language        Bitrate         Description    
+-----                           --------        -------         -----------    
+Presentation Graphics           English         25.45 kbps                      
+Presentation Graphics           Spanish         27.51 kbps
