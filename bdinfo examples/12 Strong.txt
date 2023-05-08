@@ -1,0 +1,28 @@
+PLAYLIST REPORT:
+
+Name:                   00002.MPLS  
+Length:                 2:10:39.375 (h:m:s.ms)
+Size:                   54,436,331,520 bytes
+Total Bitrate:          55.55 Mbps
+
+VIDEO:
+
+Codec                   Bitrate             Description     
+-----                   -------             -----------     
+MPEG-H HEVC Video       46731 kbps          2160p / 24 fps / 16:9 / Main 10 Profile 5.1 High / 4:2:0 / 10 bits / HDR / BT.2020 / 
+
+AUDIO:
+
+Codec                           Language        Bitrate         Description     
+-----                           --------        -------         -----------     
+Dolby Digital Audio             German          224 kbps        2.0 / 48 kHz / 224 kbps
+DTS-HD Master Audio             German          2853 kbps       7.1 / 48 kHz / 2853 kbps / 16-bit (DTS Core: 5.1 / 48 kHz / 1509 kbps / 16-bit)
+DTS-HD Master Audio             English         2855 kbps       7.1 / 48 kHz / 2855 kbps / 16-bit (DTS Core: 5.1 / 48 kHz / 1509 kbps / 16-bit)
+
+SUBTITLES:
+
+Codec                           Language        Bitrate         Description     
+-----                           --------        -------         -----------     
+Presentation Graphics           German          34.784 kbps                     
+Presentation Graphics           German          0.873 kbps                      
+Presentation Graphics           English         2.238 kbps

@@ -1,0 +1,64 @@
+PLAYLIST REPORT:
+
+Name:                   00800.MPLS  
+Length:                 2:24:33.289 (h:m:s.ms)
+Size:                   60,899,389,440 bytes
+Total Bitrate:          56.17 Mbps
+
+(*) Indicates included stream hidden by this playlist.
+
+VIDEO:
+
+Codec                   Bitrate             Description     
+-----                   -------             -----------     
+MPEG-H HEVC Video       41864 kbps          2160p / 23.976 fps / 16:9 / Main 10 @ Level 5.1 @ High / 4:2:0 / 10 bits / 1000nits / HDR10 / BT.2020
+* MPEG-H HEVC Video     65 kbps (0.15%)     1080p / 23.976 fps / 16:9 / Main 10 @ Level 5.1 @ High / 4:2:0 / 10 bits / 1000nits / Dolby Vision MEL / BT.2020
+
+AUDIO:
+
+Codec                           Language        Bitrate         Description     
+-----                           --------        -------         -----------     
+DTS-HD Master Audio             English         3887 kbps       5.1 / 48 kHz / 3887 kbps / 24-bit (DTS Core: 5.1 / 48 kHz / 768 kbps / 24-bit)
+Dolby Digital Audio             Spanish         448 kbps        5.1 / 48 kHz / 448 kbps
+DTS Audio                       French          768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+DTS Audio                       Spanish         768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+DTS Audio                       German          768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+DTS Audio                       Italian         768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+Dolby Digital Audio             Czech           448 kbps        5.1 / 48 kHz / 448 kbps
+Dolby Digital Audio             Hungarian       448 kbps        5.1 / 48 kHz / 448 kbps
+Dolby Digital Audio             Polish          448 kbps        5.1 / 48 kHz / 448 kbps
+Dolby Digital Audio             English         224 kbps        2.0 / 48 kHz / 224 kbps
+* DTS Audio                     Japanese        768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+* DTS Audio                     Japanese        768 kbps        5.1 / 48 kHz / 768 kbps / 24-bit
+
+SUBTITLES:
+
+Codec                           Language        Bitrate         Description     
+-----                           --------        -------         -----------     
+Presentation Graphics           English         19.883 kbps                     
+Presentation Graphics           Spanish         18.334 kbps                     
+Presentation Graphics           French          15.722 kbps                     
+Presentation Graphics           Spanish         18.297 kbps                     
+Presentation Graphics           Danish          17.557 kbps                     
+Presentation Graphics           Dutch           18.547 kbps                     
+Presentation Graphics           Finnish         16.318 kbps                     
+Presentation Graphics           German          17.414 kbps                     
+Presentation Graphics           Italian         20.254 kbps                     
+Presentation Graphics           Norwegian       15.101 kbps                     
+Presentation Graphics           Swedish         15.268 kbps                     
+Presentation Graphics           Chinese         16.882 kbps                     
+Presentation Graphics           Czech           17.94 kbps                      
+Presentation Graphics           Hungarian       15.397 kbps                     
+Presentation Graphics           Korean          9.624 kbps                      
+Presentation Graphics           Chinese         13.983 kbps                     
+Presentation Graphics           Polish          15.657 kbps                     
+Presentation Graphics           Portuguese      19.19 kbps                      
+Presentation Graphics           English         69.851 kbps                     
+Presentation Graphics           French          61.989 kbps                     
+Presentation Graphics           Spanish         65.462 kbps                     
+Presentation Graphics           German          70.092 kbps                     
+Presentation Graphics           Italian         70.03 kbps                      
+* Presentation Graphics         Japanese        13.574 kbps                     
+* Presentation Graphics         Japanese        0.987 kbps                      
+* Presentation Graphics         Japanese        40.845 kbps                     
+* Presentation Graphics         Japanese        0.993 kbps
